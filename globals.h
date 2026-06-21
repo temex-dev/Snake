@@ -6,10 +6,11 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window/VideoMode.hpp>
 
-const unsigned int DISPLAY_WIDTH = 1920;
-const unsigned int DISPLAY_HEIGHT = 1080;
-const unsigned int WINDOW_SIZE = 800;
-const unsigned int CELL_SIZE = 20;
-const unsigned int GRID_SIZE = WINDOW_SIZE / CELL_SIZE;
+sf::VideoMode const desktop = sf::VideoMode::getDesktopMode();
+const int DISPLAY_WIDTH = desktop.size.x;
+const int DISPLAY_HEIGHT = desktop.size.y;
+const int WINDOW_SIZE = 1024;
+const int CELL_SIZE = 20;
+const int GRID_SIZE = WINDOW_SIZE / CELL_SIZE;
 
 #endif // GLOBALS_H
